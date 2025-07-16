@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --white: #ffffff;
+  --lightblue:  #C9DBF7;
+  --navyblue: #06327D;
+  --yellow: #ffd034;
+  --green: #229E5C;
+}
+
 /* BASIC FORMATTING */
 html {
   box-sizing: border-box;
@@ -13,10 +21,14 @@ html {
 img {
   max-width: 100%;
 }
+.card img {
+  border-radius: 15px;
+}
 
 body {
   font-family: Poppins;
   font-size: 1.125rem;
+  line-height: 1.5;
   color: black;
   background-color: #063270;
   margin: 0;
@@ -24,13 +36,13 @@ body {
 }
 
 main {
-  background-color: white;
+  background-color: var(--white);
   text-align: center;
-  border-bottom: 5px solid #ffd034;
-  border-top: 5px solid #ffd034;
+  border-bottom: 5px solid var(--yellow);
+  border-top: 5px solid var(--yellow);
 }
 header {
-  color: white;
+  color: var(--white);
   text-transform: uppercase;
   font-weight: normal;
   display: flex;
@@ -39,6 +51,102 @@ header {
   align-items: center;
   gap: 1rem;
 }
+/* instruction said 3rem for h1 but i really dont like how it stack together on a small screen*/
 h1 {
   font-weight: 300;
+  font-size: 2.9rem;
+  display: inline;
+  line-height: 1.1667;
 }
+h2 {
+   font-size: 2.5rem;
+   font-weight: 300;
+   line-height: 1.1667;
+   text-transform: uppercase;
+}
+h3{
+  font-size: 1.75rem;
+  font-weight:300;
+  line-height: 1.1667;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  margin: 10px o;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: var(--white);
+}
+.maincard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+  gap: 20px;
+}
+.coffeecard {
+  text-align: left;
+  align-self:center;
+
+}
+.maincard .button {
+ background-color: var(--green);
+ color: var(--white);
+ padding: 10px 15px;
+ text-decoration: none;
+ border-radius: 10px;
+}
+.bluecard {
+  background-color: var(--lightblue);
+  text-align: start;
+  padding: 30px;
+}
+.grid-parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+.card .button {
+  text-decoration: none;
+  background-color: #043077;
+  color: var(--white);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+footer {
+  text-align: center;
+  color: var(--white);
+  padding: 30px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px;
+}
+@media (min-width:650px) {
+  .maincard {
+    padding: 0 20px;
+  }
+  .grid-parent {
+    grid-template-columns: 1fr 1fr;
+ }
+}
+@media (min-width:1000px) {
+  header {
+    justify-content: space-between;
+    padding: 30px;
+  }
+  .maincard {
+    padding: 0;
+  }
+  .grid-parent {
+    grid-template-columns:repeat(4,1fr);
+  }
+  main {
+    margin: 0 40px;
+  }
+}
+  
