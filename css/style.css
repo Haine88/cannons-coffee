@@ -6,7 +6,7 @@
   --navyblue: #06327D;
   --yellow: #ffd034;
   --green: #229E5C;
-}
+  --font: Poppins;
 
 /* BASIC FORMATTING */
 html {
@@ -26,7 +26,7 @@ img {
 }
 
 body {
-  font-family: Poppins;
+  font-family: var(--font);
   font-size: 1.125rem;
   line-height: 1.5;
   color: black;
