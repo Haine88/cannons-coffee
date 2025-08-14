@@ -1,6 +1,5 @@
 let form = document.querySelector("form");
 let greeting = document.querySelector(".message-container");
-console.log(greeting);
 let coffeeList = [];
 
 
@@ -16,6 +15,8 @@ function userInfoForm() {
 
 	userInfo.textContent = userGreeting;
 	greeting.appendChild(userInfo);
+
+	form.style.display = 'none'; //hide the form
 
 	coffeeList.push(dataObject); //push data to an array
 	console.log(coffeeList); //show list in console

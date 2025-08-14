@@ -22,6 +22,8 @@ function coffeeForm() {
 	userOrder.textContent = userGreeting;
 	message.appendChild(userOrder);
 
+	form.style.display = 'none'; //hide the form
+
 	coffeeList.push(dataObject); //push data to an array
 	console.log(coffeeList); //show list in console
 	console.log(dataObject); //Show the data object in the console
